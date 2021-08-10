@@ -89,12 +89,13 @@ unsplash crawling
 
 url = f'https://unsplash.com/s/photos/{keyword}'
 
-driver = webdriver.Chrome()
+driver = get_selenium()
 driver.get(url)
 
 time.sleep(3)
 
-scroll_down(driver)
+os.makedirs(f'./images/{keyword}', exist_ok=True)
+scroll_down(driver, keyword)
 
 # html = driver.page_source
 # soup = BeautifulSoup(html, 'html.parser')
