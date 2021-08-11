@@ -96,25 +96,3 @@ time.sleep(3)
 
 os.makedirs(f'./images/{keyword}', exist_ok=True)
 scroll_down(driver, keyword)
-
-# html = driver.page_source
-# soup = BeautifulSoup(html, 'html.parser')
-# images = soup.find_all('img', attrs={'class':'rg_i Q4LuWd'})
-
-# print('number of img tags: ', len(images))
-
-# n = 1
-
-# for i in images:
-
-#     try:
-#         imgUrl = i['src']
-#     except:
-#         imgUrl = i['data-src']
-
-#     with urllib.request.urlopen(imgUrl) as f:
-#         with open('./img/' + keyword + str(n) + '.jpg', 'wb') as h:
-#             img = f.read()
-#             h.write(img)
-
-#     n += 1
